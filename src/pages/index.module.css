@@ -1,0 +1,461 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 5rem 0 4rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(76, 132, 255, 0.32), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(0, 200, 170, 0.22), transparent 30%),
+    linear-gradient(135deg, #0f172a 0%, #12233d 50%, #0b1324 100%);
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), transparent);
+  pointer-events: none;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.85fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 760px;
+}
+
+.brandBanner {
+  width: min(100%, 420px);
+  margin-bottom: 1.5rem;
+}
+
+.brandBanner img,
+.panelBanner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.brandBanner img {
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 24px 60px rgba(2, 8, 23, 0.28);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  color: #f8fafc;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #bfdbfe;
+  margin-bottom: 1rem;
+}
+
+.heroDescription {
+  max-width: 680px;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.75rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.metricCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+.metricCard strong {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.metricCard span {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.heroPanel {
+  padding: 1.5rem;
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.72);
+  box-shadow: 0 30px 80px rgba(2, 8, 23, 0.35);
+  backdrop-filter: blur(14px);
+}
+
+.panelBanner {
+  margin-bottom: 1rem;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.panelHeader {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.panelList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.panelList li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.panelList span {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.panelList small {
+  color: #94a3b8;
+  font-size: 0.87rem;
+}
+
+.panelFooter {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #cbd5e1;
+}
+
+.panelFooter strong {
+  color: #f8fafc;
+}
+
+.enterpriseSection,
+.productSection,
+.strategySection {
+  padding: 1rem 0 4rem;
+}
+
+.sectionHeading {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.sectionEyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sectionHeading h2 {
+  margin-bottom: 0.75rem;
+}
+
+.sectionHeading p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.highlightCard {
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 245, 249, 0.98));
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.highlightCard span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(37, 99, 235, 0.12);
+  color: #1d4ed8;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.highlightCard p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.75;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.productCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.productCard:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
+}
+
+.productCard strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.productCard p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.productCard span {
+  color: #1d4ed8;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.strategyLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.benefitStack {
+  display: grid;
+  gap: 1rem;
+}
+
+.benefitCard {
+  padding: 1.35rem 1.5rem;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.benefitCard strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.benefitCard p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.processCard {
+  padding: 1.5rem;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #0f172a 0%, #10213c 100%);
+  border: 1px solid rgba(96, 165, 250, 0.16);
+  box-shadow: 0 24px 60px rgba(2, 8, 23, 0.3);
+}
+
+.processLabel {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: #93c5fd;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.processCard h3 {
+  color: #f8fafc;
+  margin-bottom: 1rem;
+}
+
+.processList {
+  margin: 0 0 1.5rem;
+  padding-left: 1.2rem;
+  color: #cbd5e1;
+}
+
+.processList li {
+  margin-bottom: 0.85rem;
+  line-height: 1.75;
+}
+
+.processActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+[data-theme='dark'] .sectionEyebrow {
+  color: #93c5fd;
+}
+
+[data-theme='dark'] .sectionHeading p {
+  color: #94a3b8;
+}
+
+[data-theme='dark'] .highlightCard {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.82));
+  box-shadow: 0 20px 50px rgba(2, 8, 23, 0.35);
+}
+
+[data-theme='dark'] .highlightCard span {
+  background: rgba(96, 165, 250, 0.16);
+  color: #93c5fd;
+}
+
+[data-theme='dark'] .highlightCard p {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .productCard {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.88));
+  border-color: rgba(96, 165, 250, 0.16);
+  box-shadow: 0 18px 40px rgba(2, 8, 23, 0.3);
+}
+
+[data-theme='dark'] .productCard strong {
+  color: #f8fafc;
+}
+
+[data-theme='dark'] .productCard p {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .productCard span {
+  color: #93c5fd;
+}
+
+[data-theme='dark'] .benefitCard {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.86));
+  box-shadow: 0 18px 40px rgba(2, 8, 23, 0.3);
+}
+
+[data-theme='dark'] .benefitCard strong {
+  color: #f8fafc;
+}
+
+[data-theme='dark'] .benefitCard p {
+  color: #cbd5e1;
+}
+
+@media screen and (max-width: 996px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .highlightGrid,
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategyLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .heroTitle {
+    font-size: 2.4rem;
+  }
+
+  .productCard {
+    flex-direction: column;
+  }
+}

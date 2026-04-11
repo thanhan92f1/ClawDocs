@@ -1,0 +1,59 @@
+---
+id: overview
+title: Tổng quan Openclaw
+slug: /
+description: Trang chủ tài liệu riêng cho Openclaw.
+last_update:
+  date: 2026-04-11
+  author: Nguyen Thanh An
+---
+
+import Link from '@docusaurus/Link';
+
+export const HeroDescription = () => (
+  <>
+    Trung tâm tài liệu dành cho đội triển khai và vận hành Openclaw, tập trung vào
+    {' '}cài đặt, cấu hình, vận hành và các tiêu chuẩn triển khai môi trường thực tế.
+  </>
+);
+
+export const PrimaryActionLabel = () => <>Bắt đầu ngay</>;
+
+export const SecondaryActionLabel = () => <>Về cổng chính</>;
+
+export const ScopeDescription = () => <>Chuẩn triển khai, hướng dẫn cấu hình, vận hành nền tảng và xử lý sự cố.</>;
+
+export const AudienceDescription = () => <>Admin hệ thống, đội DevOps, đội triển khai sản phẩm và kỹ sư hỗ trợ.</>;
+
+export const NextPriorityDescription = () => <>Xây dựng runbook, checklist phát hành và quy trình backup/restore.</>;
+
+<div className="docs-home docs-home--openclaw">
+  <div className="docs-home__hero">
+    <span className="docs-home__eyebrow">Openclaw Workspace</span>
+    <h1>Openclaw Documentation Hub</h1>
+    <p><HeroDescription /></p>
+    <div className="docs-home__actions">
+      <Link className="button button--primary button--lg" to="/openclaw/intro">
+        <PrimaryActionLabel />
+      </Link>
+      <Link className="button button--outline button--primary button--lg" to="/">
+        <SecondaryActionLabel />
+      </Link>
+    </div>
+  </div>
+
+  <div className="docs-home__grid">
+    <div className="docs-home__card">
+      <h2>Phạm vi tài liệu</h2>
+      <p><ScopeDescription /></p>
+    </div>
+    <div className="docs-home__card">
+      <h2>Đối tượng sử dụng</h2>
+      <p><AudienceDescription /></p>
+    </div>
+    <div className="docs-home__card">
+      <h2>Ưu tiên tiếp theo</h2>
+      <p><NextPriorityDescription /></p>
+    </div>
+  </div>
+</div>

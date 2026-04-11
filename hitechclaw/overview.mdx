@@ -1,0 +1,59 @@
+---
+id: overview
+title: Tổng quan HiTechClaw
+slug: /
+description: Trang chủ tài liệu riêng cho HiTechClaw.
+last_update:
+  date: 2026-04-11
+  author: Nguyen Thanh An
+---
+
+import Link from '@docusaurus/Link';
+
+export const HeroDescription = () => (
+  <>
+    Không gian tài liệu nâng cao cho HiTechClaw, phục vụ kiến trúc hệ thống, mô hình
+    {' '}triển khai enterprise, vận hành nâng cao và các tiêu chuẩn bảo mật.
+  </>
+);
+
+export const PrimaryActionLabel = () => <>Khám phá tài liệu</>;
+
+export const SecondaryActionLabel = () => <>Về cổng chính</>;
+
+export const ScopeDescription = () => <>Architecture, deployment model, administration, scalability và bảo mật.</>;
+
+export const AudienceDescription = () => <>Architect, technical lead, team platform, DevOps và đội kỹ thuật cấp cao.</>;
+
+export const NextPriorityDescription = () => <>Chuẩn hóa kiến trúc tham chiếu, HA/DR, giám sát và policy vận hành.</>;
+
+<div className="docs-home docs-home--hitechclaw">
+  <div className="docs-home__hero">
+    <span className="docs-home__eyebrow">HiTechClaw Workspace</span>
+    <h1>HiTechClaw Documentation Hub</h1>
+    <p><HeroDescription /></p>
+    <div className="docs-home__actions">
+      <Link className="button button--primary button--lg" to="/hitechclaw/intro">
+        <PrimaryActionLabel />
+      </Link>
+      <Link className="button button--outline button--primary button--lg" to="/">
+        <SecondaryActionLabel />
+      </Link>
+    </div>
+  </div>
+
+  <div className="docs-home__grid">
+    <div className="docs-home__card">
+      <h2>Phạm vi tài liệu</h2>
+      <p><ScopeDescription /></p>
+    </div>
+    <div className="docs-home__card">
+      <h2>Đối tượng sử dụng</h2>
+      <p><AudienceDescription /></p>
+    </div>
+    <div className="docs-home__card">
+      <h2>Ưu tiên tiếp theo</h2>
+      <p><NextPriorityDescription /></p>
+    </div>
+  </div>
+</div>

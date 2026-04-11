@@ -1,0 +1,59 @@
+---
+id: overview
+title: Tổng quan NemoClaw
+slug: /
+description: Trang chủ tài liệu riêng cho NemoClaw.
+last_update:
+  date: 2026-04-11
+  author: Nguyen Thanh An
+---
+
+import Link from '@docusaurus/Link';
+
+export const HeroDescription = () => (
+  <>
+    Khu vực tài liệu cho NemoClaw, tập trung vào tính năng, tích hợp, luồng nghiệp vụ
+    {' '}và tiêu chuẩn vận hành cho các nhóm sản phẩm và đội tích hợp.
+  </>
+);
+
+export const PrimaryActionLabel = () => <>Xem hướng dẫn</>;
+
+export const SecondaryActionLabel = () => <>Về cổng chính</>;
+
+export const ScopeDescription = () => <>Tính năng, cấu hình tích hợp, mô tả API và các kịch bản nghiệp vụ.</>;
+
+export const AudienceDescription = () => <>Business analyst, solution engineer, team tích hợp và kỹ sư hỗ trợ.</>;
+
+export const NextPriorityDescription = () => <>Thêm sơ đồ workflow, tài liệu mapping dữ liệu và hướng dẫn tích hợp hệ thống.</>;
+
+<div className="docs-home docs-home--nemoclaw">
+  <div className="docs-home__hero">
+    <span className="docs-home__eyebrow">NemoClaw Workspace</span>
+    <h1>NemoClaw Documentation Hub</h1>
+    <p><HeroDescription /></p>
+    <div className="docs-home__actions">
+      <Link className="button button--primary button--lg" to="/nemoclaw/intro">
+        <PrimaryActionLabel />
+      </Link>
+      <Link className="button button--outline button--primary button--lg" to="/">
+        <SecondaryActionLabel />
+      </Link>
+    </div>
+  </div>
+
+  <div className="docs-home__grid">
+    <div className="docs-home__card">
+      <h2>Phạm vi tài liệu</h2>
+      <p><ScopeDescription /></p>
+    </div>
+    <div className="docs-home__card">
+      <h2>Đối tượng sử dụng</h2>
+      <p><AudienceDescription /></p>
+    </div>
+    <div className="docs-home__card">
+      <h2>Ưu tiên tiếp theo</h2>
+      <p><NextPriorityDescription /></p>
+    </div>
+  </div>
+</div>
